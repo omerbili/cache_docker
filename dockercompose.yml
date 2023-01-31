@@ -1,0 +1,12 @@
+version: "3.4"
+
+services:
+  cachenginx:
+    image: nginx:latest
+    container_name: cachenginx
+    restart: unless-stopped
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ./conf.d/:/etc/nginx/conf.d/
