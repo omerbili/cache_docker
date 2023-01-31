@@ -2,7 +2,7 @@ version: "3.4"
 
 services:
   cachenginx:
-    image: nginx:latest
+    image: ${DOCKER_REGISTRY-}cachenginx #nginx:latest
     container_name: cachenginx
     restart: unless-stopped
     build:
@@ -11,5 +11,5 @@ services:
     ports:
       - 80:80
       - 443:443
-    volumes:
-      - ./conf.d:/etc/nginx/conf.d
+    #volumes:
+    #  - ./conf.d:/etc/nginx/conf.d
