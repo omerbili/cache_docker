@@ -16,4 +16,11 @@ RUN mkdir -p /var/cache/aolsoru/pages_mobile
 RUN mkdir -p /var/cache/aolsoru/pages_amp
 RUN mkdir -p /var/cache/aolsoru/pages_api
 
+RUN mkdir -p /var/cache/aoosoru/images
+RUN mkdir -p /var/cache/aoosoru/css_js
+RUN mkdir -p /var/cache/aoosoru/pages_web
+RUN mkdir -p /var/cache/aoosoru/pages_mobile
+RUN mkdir -p /var/cache/aoosoru/pages_amp
+RUN mkdir -p /var/cache/aoosoru/pages_api
+
 RUN chmod -R 755 /var/cache
