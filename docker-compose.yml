@@ -29,4 +29,4 @@ services:
       context: ../ATAAOF_Dash/
       dockerfile: Dockerfile
     ports:
-      - 5106:3000
+      - 3000:5106
