@@ -13,3 +13,20 @@ services:
       - 443:443
     #volumes:
     #  - ./conf.d:/etc/nginx/conf.d
+  ataaofapi:
+    image: ${DOCKER_REGISTRY-}ataaofapi
+    container_name: ataaofapi
+    build:
+      context: ../ATAAOF_App/
+      dockerfile: Dockerfile
+    ports:
+      - 5105:5105
+  ataaofdash:
+    image: ${DOCKER_REGISTRY-}ataaofdash
+    container_name: ataaofdash
+    stdin_open: true
+    build:
+      context: ../ATAAOF_Dash/
+      dockerfile: Dockerfile
+    ports:
+      - 5106:5106
